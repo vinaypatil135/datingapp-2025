@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C#: API Debug",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "${workspaceFolder}/API/bin/Debug/net9.0/API.dll",
+      "cwd": "${workspaceFolder}/API",
+      "stopAtEntry": false
+    },
+    {
+      "name": ".NET Core Attach",
+      "type": "coreclr",
+      "request": "attach"
+    }
+  ]
+}
