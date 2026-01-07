@@ -22,7 +22,7 @@ public class AccountController(AppDbContext context, ITokenservice tokenservice)
         var hmac=new HMACSHA512();
         var users=new AppUser
         {
-            DisplayName=registerdto.displayName,
+            DisplayName = registerdto.displayName,
             Email=registerdto.email,
             PasswordHash=hmac.ComputeHash(Encoding.UTF8.GetBytes(registerdto.password)),
             PasswordSalt=hmac.Key

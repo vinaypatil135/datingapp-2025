@@ -17,12 +17,12 @@ namespace API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Member>> GetMemer(string id)
         {
-            var members=await memberRepository.GetMemberByIdAsync(id);
-            if (members == null)
+            var member=await memberRepository.GetMemberByIdAsync(id);
+            if (member == null)
             {
                 return NotFound();
             }
-            return members;
+            return member;
         } 
    
        [HttpGet("{id}/photos")]
