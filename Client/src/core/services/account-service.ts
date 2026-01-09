@@ -36,7 +36,7 @@ register(creads:Registercreds){
 
     setCurrentUser(user:User){
       localStorage.setItem('user',JSON.stringify(user))
-              this.currentuser.set(user)
+       this.currentuser.set(user)
     }
       logout(){
         localStorage.removeItem('user');

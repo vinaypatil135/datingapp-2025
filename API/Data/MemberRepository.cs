@@ -16,6 +16,13 @@ public class MemberRepository(AppDbContext context) : IMemberRepository
     {
        return await context.Members.FindAsync(id);
     }
+    
+    public async Task<Member?> GetMemberforUpdate(string id)
+    {
+      return await context.Members
+      .Include(X=>X.User)
+      .SingleOrDefaultAsync(X =>X.Id ==id);
+    }
 
     public async Task<IReadOnlyList<Photo>> GetPhotosForMemberAsync(string memeberId)
     {
